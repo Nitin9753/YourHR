@@ -13,13 +13,14 @@ connection.connect((err) => {
     if (err) throw err;
     console.log('Connected to MySQL database');
 });
-// const query=`CREATE TABLE schools (
-//     id INT AUTO_INCREMENT PRIMARY KEY,
-//     name VARCHAR(255) NOT NULL,
-//     address VARCHAR(255) NOT NULL,
-//     latitude FLOAT NOT NULL,
-//     longitude FLOAT NOT NULL);`;
-// connection.execute(query, (err)=>{
-//     console.log("DONE");
-// })
+const query=`CREATE TABLE schools (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     name VARCHAR(255) NOT NULL,
+     address VARCHAR(255) NOT NULL,
+     latitude FLOAT NOT NULL,
+     longitude FLOAT NOT NULL);`;
+connection.execute(query,(err)=>{
+    if(err) console.log('Table creation done');
+    else console.log('table created');
+})
 module.exports = connection;
