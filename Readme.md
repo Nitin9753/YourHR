@@ -9,3 +9,4 @@
         2. Run npm install command
         3. Run the npm start command
         4. Change the baseURL of the axios to your backend url
+        ![image](https://github.com/user-attachments/assets/038b13a5-c8bd-4f6d-a0d0-b6667307d65a)
