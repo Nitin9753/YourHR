@@ -33,7 +33,7 @@ const Register = () => {
       for(let pair of formDataToSend.entries()){
         console.log(pair[0]+":"+pair[1]);
       }
-      const res = await axios.post('http://localhost:5000/api/users/register', formDataToSend);
+      const res = await axios.post('https://yourhr-7hsc.onrender.com/api/users/register', formDataToSend);
       console.log(res.data);
       if(res.data){
         navigate('/');
