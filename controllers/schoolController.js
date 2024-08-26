@@ -17,8 +17,8 @@ exports.addSchool = (req, res) => {
 };
 
 exports.listSchools = (req, res) => {
-    const userLat = parseFloat(req.body.latitude);
-    const userLong = parseFloat(req.body.longitude);
+    const userLat = parseFloat(req.query.latitude);
+    const userLong = parseFloat(req.query.longitude);
 
     if (isNaN(userLat) || isNaN(userLong)) {
         return res.status(400).json({ error: 'Invalid latitude or longitude' });
